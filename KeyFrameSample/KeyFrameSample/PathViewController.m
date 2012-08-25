@@ -13,7 +13,7 @@
 
 @implementation PathViewController
 {
-    __weak IBOutlet UIView *_testView;
+    __weak IBOutlet UILabel *_testView;
 
     __weak IBOutlet UIView *_point1View;
     __weak IBOutlet UIView *_point2View;
@@ -58,6 +58,9 @@
     [path addCurveToPoint:_point4View.center controlPoint1:_point2View.center controlPoint2:_point3View.center];
 
     animation.path = path.CGPath;
+
+    //animation.rotationMode = kCAAnimationRotateAuto;
+    //animation.rotationMode = kCAAnimationRotateAutoReverse;
 
     [_testView.layer removeAllAnimations];
 
